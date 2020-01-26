@@ -48,9 +48,8 @@
     <Compile Include="BaseModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SwapModel\Properties\Price.cs" />
-    <Compile Include="SwapModel\Properties\Result.cs" />
-    <Compile Include="SwapModel\Properties\Sides.cs" />
     <Compile Include="SwapModel\Properties\Stock.cs" />
+    <Compile Include="SwapModel\Properties\Result.cs" />
     <Compile Include="SwapModel\SwapModel.cs" />
   </ItemGroup>
   <ItemGroup>

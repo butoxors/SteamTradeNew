@@ -49,6 +49,10 @@
       <Project>{73d96516-a09d-496f-8375-46db32304099}</Project>
       <Name>Enums</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Models\Models.csproj">
+      <Project>{04E80D9F-44D7-4C95-81D8-95780E45B086}</Project>
+      <Name>Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

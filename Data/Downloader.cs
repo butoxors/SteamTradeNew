@@ -1,29 +1,36 @@
 ﻿using Enums;
+using Models;
+using Models.SwapModel;
 using System;
+using System.Collections.Generic;
+using System.Data;
 using System.IO;
 using System.Net;
+using System.Net.Http;
 using System.Threading.Tasks;
 
 namespace Data
 {
-    public class Downloader
+    public static class DataDownloader
     {
-        public string DownloadString(Enum uri)
+        public static dynamic GetItemsFromLootFarm(Enum uri)
         {
             WebClient client = new WebClient();
-            return client.DownloadString(uri.GetDescription());
+            var json = client.DownloadString(uri.GetDescription());
+            var items = BaseModel<LootFarmModel>.FromJsonToList(json);
+            return items;
         }
 
-        public async Task<string> GetXHR(Enum uri)
+        public static dynamic GetItemsFromSwapGG(Enum uri)
         {
-            HttpWebRequest request = (HttpWebRequest)WebRequest.Create(uri.GetDescription());
-            request.AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate;
-
-            using (HttpWebResponse response = (HttpWebResponse)await request.GetResponseAsync())
-            using (Stream stream = response.GetResponseStream())
-            using (StreamReader reader = new StreamReader(stream))
+            using (var client = new HttpClient(new HttpClientHandler { AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate }))
             {
-                return await reader.ReadToEndAsync();
+                HttpResponseMessage response = client.GetAsync(uri.GetDescription()).Result;
+                response.EnsureSuccessStatusCode();
+                string result = response.Content.ReadAsStringAsync().Result;
+                var items = BaseModel<SwapModel>.FromJson(result).Result;
+
+                return items;
             }
         }
     }

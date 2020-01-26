@@ -80,6 +80,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BL\BL.csproj">
+      <Project>{52d56d52-c0df-4672-8016-49e4764db943}</Project>
+      <Name>BL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Data\Data.csproj">
       <Project>{aef14276-2f39-4760-bf0d-6fc2d68bfc91}</Project>
       <Name>Data</Name>
@@ -87,6 +91,10 @@
     <ProjectReference Include="..\Enums\Enums.csproj">
       <Project>{73d96516-a09d-496f-8375-46db32304099}</Project>
       <Name>Enums</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Extensions\Extensions.csproj">
+      <Project>{0a9fe196-70b1-4699-b2f1-3cf4762629ec}</Project>
+      <Name>Extensions</Name>
     </ProjectReference>
     <ProjectReference Include="..\Models\Models.csproj">
       <Project>{04e80d9f-44d7-4c95-81d8-95780e45b086}</Project>

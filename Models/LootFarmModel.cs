@@ -1,10 +1,8 @@
 ﻿namespace Models
 {
-    using Json;
     using Newtonsoft.Json;
-    using System.Collections.Generic;
 
-    public class LootFatmModel : BaseModel<LootFatmModel>
+    public class LootFarmModel : BaseModel<LootFarmModel>
     {
         [JsonProperty("name")]
         public string Name { get; set; }

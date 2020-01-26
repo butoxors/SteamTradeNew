@@ -1,10 +1,10 @@
-﻿using System.Collections.Generic;
-using Models.SwapModel.Properties;
+﻿using Models.SwapModel.Properties;
 using Newtonsoft.Json;
+using System.Collections.Generic;
 
 namespace Models.SwapModel
 {
-    public class SwapModel : BaseModel<SwapModel>
+    public class SwapModel
     {
         [JsonProperty("time")]
         public long Time { get; set; }

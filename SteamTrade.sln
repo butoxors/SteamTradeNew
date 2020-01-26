@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enums", "Enums\Enums.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{AEF14276-2F39-4760-BF0D-6FC2D68BFC91}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BL", "BL\BL.csproj", "{52D56D52-C0DF-4672-8016-49E4764DB943}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Extensions", "Extensions\Extensions.csproj", "{0A9FE196-70B1-4699-B2F1-3CF4762629EC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +43,14 @@ Global
 		{AEF14276-2F39-4760-BF0D-6FC2D68BFC91}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AEF14276-2F39-4760-BF0D-6FC2D68BFC91}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AEF14276-2F39-4760-BF0D-6FC2D68BFC91}.Release|Any CPU.Build.0 = Release|Any CPU
+		{52D56D52-C0DF-4672-8016-49E4764DB943}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{52D56D52-C0DF-4672-8016-49E4764DB943}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{52D56D52-C0DF-4672-8016-49E4764DB943}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{52D56D52-C0DF-4672-8016-49E4764DB943}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A9FE196-70B1-4699-B2F1-3CF4762629EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A9FE196-70B1-4699-B2F1-3CF4762629EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A9FE196-70B1-4699-B2F1-3CF4762629EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A9FE196-70B1-4699-B2F1-3CF4762629EC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
