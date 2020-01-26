@@ -10,6 +10,9 @@ namespace View
 {
     public partial class MainView : Form
     {
+        private string lootUrl = LootFarmUrls.Dota_URL.GetDescription();
+        private string swapUrl = SwapGGUrls.Dota_URL.GetDescription();
+
         public MainView()
         {
             InitializeComponent();
@@ -17,8 +20,8 @@ namespace View
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var loot = DataDownloader.GetItemsFromLootFarm(LootFarmUrls.Dota_URL);
-            var swap = DataDownloader.GetItemsFromSwapGG(SwapGGUrls.Dota_URL);
+            var loot = DataDownloader.GetItemsFromLootFarm(lootUrl);
+            var swap = DataDownloader.GetItemsFromSwapGG(swapUrl);
             var flag = sourcesCB1.SelectedIndex == 0 ? false : true;
             var dataSource = new TableConverter().ConvertModels(loot, swap, flag);
 
@@ -41,5 +44,13 @@ namespace View
                 }
             }
         }
+
+        private void gameSelector_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            lootUrl = gameSelector.Text.GetGameUrl<LootFarmUrls>();
+            swapUrl = gameSelector.Text.GetGameUrl<SwapGGUrls>();
+            btnGetData.Enabled = true;
+        }
+        
     }
 }

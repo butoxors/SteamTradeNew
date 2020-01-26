@@ -80,6 +80,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Attributes\Attributes.csproj">
+      <Project>{3d57af21-fc8a-4ec5-bf79-4f25e3c68d5c}</Project>
+      <Name>Attributes</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BL\BL.csproj">
       <Project>{52d56d52-c0df-4672-8016-49e4764db943}</Project>
       <Name>BL</Name>

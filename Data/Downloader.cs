@@ -1,31 +1,26 @@
-﻿using Enums;
-using Models;
+﻿using Models;
 using Models.SwapModel;
-using System;
-using System.Collections.Generic;
-using System.Data;
-using System.IO;
 using System.Net;
 using System.Net.Http;
-using System.Threading.Tasks;
 
 namespace Data
 {
     public static class DataDownloader
     {
-        public static dynamic GetItemsFromLootFarm(Enum uri)
+        public static dynamic GetItemsFromLootFarm(string uri)
         {
             WebClient client = new WebClient();
-            var json = client.DownloadString(uri.GetDescription());
+            var json = client.DownloadString(uri);
             var items = BaseModel<LootFarmModel>.FromJsonToList(json);
+
             return items;
         }
 
-        public static dynamic GetItemsFromSwapGG(Enum uri)
+        public static dynamic GetItemsFromSwapGG(string uri)
         {
             using (var client = new HttpClient(new HttpClientHandler { AutomaticDecompression = DecompressionMethods.GZip | DecompressionMethods.Deflate }))
             {
-                HttpResponseMessage response = client.GetAsync(uri.GetDescription()).Result;
+                HttpResponseMessage response = client.GetAsync(uri).Result;
                 response.EnsureSuccessStatusCode();
                 string result = response.Content.ReadAsStringAsync().Result;
                 var items = BaseModel<SwapModel>.FromJson(result).Result;

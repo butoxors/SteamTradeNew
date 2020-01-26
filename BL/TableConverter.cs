@@ -33,7 +33,8 @@ namespace BL
                     SwapMax = x.Stock.Max,
                     Income = Math.Round(!flag ? (y.Price / 100.0) - (x.Price.Value / 100.0) : (x.Price.Value / 100.0) - (y.Price / 100.0), 2)
                 })
-                .Where(x => !flag ? x.SwapHave < x.SwapMax : x.LootHave < x.LootMax);
+                .Where(x => !flag ? (x.SwapHave < x.SwapMax) && x.LootHave > 0 : (x.LootHave < x.LootMax) && x.SwapHave > 0)
+                .OrderBy(x => x.Income);
             dt.Init();
             foreach(var j in joined)
             {

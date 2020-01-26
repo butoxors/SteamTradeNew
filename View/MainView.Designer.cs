@@ -32,12 +32,15 @@
             this.mainData = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.DirectionGB = new System.Windows.Forms.GroupBox();
-            this.sourcesCB1 = new System.Windows.Forms.ComboBox();
-            this.sourcesCB2 = new System.Windows.Forms.ComboBox();
             this.changeDirection = new System.Windows.Forms.Button();
+            this.sourcesCB2 = new System.Windows.Forms.ComboBox();
+            this.sourcesCB1 = new System.Windows.Forms.ComboBox();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.gameSelector = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.mainData)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.DirectionGB.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnGetData
@@ -46,7 +49,7 @@
             this.btnGetData.Name = "btnGetData";
             this.btnGetData.Size = new System.Drawing.Size(75, 55);
             this.btnGetData.TabIndex = 1;
-            this.btnGetData.Text = "GetData";
+            this.btnGetData.Text = "Get Data";
             this.btnGetData.UseVisualStyleBackColor = true;
             this.btnGetData.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -62,7 +65,7 @@
             this.mainData.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.mainData.RowTemplate.Height = 100;
             this.mainData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
-            this.mainData.Size = new System.Drawing.Size(750, 305);
+            this.mainData.Size = new System.Drawing.Size(750, 343);
             this.mainData.TabIndex = 2;
             // 
             // groupBox1
@@ -70,10 +73,10 @@
             this.groupBox1.Controls.Add(this.mainData);
             this.groupBox1.Location = new System.Drawing.Point(12, 73);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(762, 292);
+            this.groupBox1.Size = new System.Drawing.Size(762, 365);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "groupBox1";
+            this.groupBox1.Text = "Data table";
             // 
             // DirectionGB
             // 
@@ -85,20 +88,17 @@
             this.DirectionGB.Size = new System.Drawing.Size(198, 55);
             this.DirectionGB.TabIndex = 4;
             this.DirectionGB.TabStop = false;
-            this.DirectionGB.Text = "groupBox2";
+            this.DirectionGB.Text = "Loot direction";
             // 
-            // sourcesCB1
+            // changeDirection
             // 
-            this.sourcesCB1.Enabled = false;
-            this.sourcesCB1.FormattingEnabled = true;
-            this.sourcesCB1.Items.AddRange(new object[] {
-            "Loot",
-            "Swap"});
-            this.sourcesCB1.Location = new System.Drawing.Point(6, 19);
-            this.sourcesCB1.Name = "sourcesCB1";
-            this.sourcesCB1.Size = new System.Drawing.Size(72, 21);
-            this.sourcesCB1.TabIndex = 0;
-            this.sourcesCB1.Text = "Loot";
+            this.changeDirection.Location = new System.Drawing.Point(84, 17);
+            this.changeDirection.Name = "changeDirection";
+            this.changeDirection.Size = new System.Drawing.Size(30, 23);
+            this.changeDirection.TabIndex = 1;
+            this.changeDirection.Text = "=>";
+            this.changeDirection.UseVisualStyleBackColor = true;
+            this.changeDirection.Click += new System.EventHandler(this.changeDirection_Click);
             // 
             // sourcesCB2
             // 
@@ -113,29 +113,58 @@
             this.sourcesCB2.TabIndex = 0;
             this.sourcesCB2.Text = "Swap";
             // 
-            // changeDirection
+            // sourcesCB1
             // 
-            this.changeDirection.Location = new System.Drawing.Point(84, 17);
-            this.changeDirection.Name = "changeDirection";
-            this.changeDirection.Size = new System.Drawing.Size(30, 23);
-            this.changeDirection.TabIndex = 1;
-            this.changeDirection.Text = "=>";
-            this.changeDirection.UseVisualStyleBackColor = true;
-            this.changeDirection.Click += new System.EventHandler(this.changeDirection_Click);
+            this.sourcesCB1.Enabled = false;
+            this.sourcesCB1.FormattingEnabled = true;
+            this.sourcesCB1.Items.AddRange(new object[] {
+            "Loot",
+            "Swap"});
+            this.sourcesCB1.Location = new System.Drawing.Point(6, 19);
+            this.sourcesCB1.Name = "sourcesCB1";
+            this.sourcesCB1.Size = new System.Drawing.Size(72, 21);
+            this.sourcesCB1.TabIndex = 0;
+            this.sourcesCB1.Text = "Loot";
+            // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.gameSelector);
+            this.groupBox2.Location = new System.Drawing.Point(297, 12);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(205, 55);
+            this.groupBox2.TabIndex = 5;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Game";
+            // 
+            // gameSelector
+            // 
+            this.gameSelector.FormattingEnabled = true;
+            this.gameSelector.Items.AddRange(new object[] {
+            "Dota",
+            "RUST",
+            "H1Z1"});
+            this.gameSelector.Location = new System.Drawing.Point(6, 19);
+            this.gameSelector.Name = "gameSelector";
+            this.gameSelector.Size = new System.Drawing.Size(193, 21);
+            this.gameSelector.TabIndex = 0;
+            this.gameSelector.Text = "Dota";
+            this.gameSelector.SelectedIndexChanged += new System.EventHandler(this.gameSelector_SelectedIndexChanged);
             // 
             // MainView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(784, 450);
+            this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.DirectionGB);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.btnGetData);
             this.Name = "MainView";
-            this.Text = "Form1";
+            this.Text = "Main Vieww Form";
             ((System.ComponentModel.ISupportInitialize)(this.mainData)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.DirectionGB.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -148,6 +177,8 @@
         private System.Windows.Forms.ComboBox sourcesCB2;
         private System.Windows.Forms.ComboBox sourcesCB1;
         public System.Windows.Forms.DataGridView mainData;
+        private System.Windows.Forms.GroupBox groupBox2;
+        private System.Windows.Forms.ComboBox gameSelector;
     }
 }
 
