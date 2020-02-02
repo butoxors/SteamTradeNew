@@ -1,4 +1,5 @@
 ﻿using BL;
+using Buy;
 using Data;
 using Enums.LootFarm;
 using Enums.SwapGG;
@@ -51,6 +52,18 @@ namespace View
             swapUrl = gameSelector.Text.GetGameUrl<SwapGGUrls>();
             btnGetData.Enabled = true;
         }
-        
+
+        private void mainData_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.ColumnIndex == 0)
+                Clipboard.SetText(mainData.Rows[e.RowIndex].Cells[e.ColumnIndex].Value.ToString());
+        }
+
+        private void BuyLootBtn_Click(object sender, EventArgs e)
+        {
+            LootRunner runner = new LootRunner();
+            runner.OpenLootPage();
+            runner.LogIn();
+        }
     }
 }

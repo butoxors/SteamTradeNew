@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "View", "View\View.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Models", "Models\Models.csproj", "{04E80D9F-44D7-4C95-81D8-95780E45B086}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Json", "Json\Json.csproj", "{FCFB1531-B601-4896-93D8-E39E23E06A78}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JsonHelper", "Json\JsonHelper.csproj", "{FCFB1531-B601-4896-93D8-E39E23E06A78}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enums", "Enums\Enums.csproj", "{73D96516-A09D-496F-8375-46DB32304099}"
 EndProject
@@ -18,6 +18,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Extensions", "Extensions\Extensions.csproj", "{0A9FE196-70B1-4699-B2F1-3CF4762629EC}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Attributes", "Attributes\Attributes.csproj", "{3D57AF21-FC8A-4EC5-BF79-4F25E3C68D5C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Buy", "Buy\Buy.csproj", "{7C2AD002-966C-4634-B89B-AA2A49F5B1A6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PageObject", "PageObject\PageObject.csproj", "{FC1E07CE-C0B2-4D49-A4DD-5D2839A1D629}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +61,14 @@ Global
 		{3D57AF21-FC8A-4EC5-BF79-4F25E3C68D5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3D57AF21-FC8A-4EC5-BF79-4F25E3C68D5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3D57AF21-FC8A-4EC5-BF79-4F25E3C68D5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C2AD002-966C-4634-B89B-AA2A49F5B1A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C2AD002-966C-4634-B89B-AA2A49F5B1A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C2AD002-966C-4634-B89B-AA2A49F5B1A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C2AD002-966C-4634-B89B-AA2A49F5B1A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC1E07CE-C0B2-4D49-A4DD-5D2839A1D629}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC1E07CE-C0B2-4D49-A4DD-5D2839A1D629}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC1E07CE-C0B2-4D49-A4DD-5D2839A1D629}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC1E07CE-C0B2-4D49-A4DD-5D2839A1D629}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

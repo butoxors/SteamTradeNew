@@ -2,7 +2,7 @@
 using Newtonsoft.Json;
 using System;
 
-namespace Json
+namespace JsonHelper
 {
     public class TypeEnumConverter : JsonConverter
     {

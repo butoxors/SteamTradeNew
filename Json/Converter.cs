@@ -2,7 +2,7 @@
 using Newtonsoft.Json.Converters;
 using System.Globalization;
 
-namespace Json
+namespace JsonHelper
 {
     public class Converter
     {

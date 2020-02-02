@@ -37,6 +37,8 @@
             this.sourcesCB1 = new System.Windows.Forms.ComboBox();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.gameSelector = new System.Windows.Forms.ComboBox();
+            this.BuyLootBtn = new System.Windows.Forms.Button();
+            this.ButSwapBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.mainData)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.DirectionGB.SuspendLayout();
@@ -64,9 +66,10 @@
             this.mainData.ReadOnly = true;
             this.mainData.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.AutoSizeToAllHeaders;
             this.mainData.RowTemplate.Height = 100;
-            this.mainData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.mainData.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.mainData.Size = new System.Drawing.Size(750, 343);
             this.mainData.TabIndex = 2;
+            this.mainData.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.mainData_CellClick);
             // 
             // groupBox1
             // 
@@ -150,11 +153,32 @@
             this.gameSelector.Text = "Dota";
             this.gameSelector.SelectedIndexChanged += new System.EventHandler(this.gameSelector_SelectedIndexChanged);
             // 
+            // BuyLootBtn
+            // 
+            this.BuyLootBtn.Location = new System.Drawing.Point(508, 12);
+            this.BuyLootBtn.Name = "BuyLootBtn";
+            this.BuyLootBtn.Size = new System.Drawing.Size(123, 55);
+            this.BuyLootBtn.TabIndex = 6;
+            this.BuyLootBtn.Text = "Buy items from Loot.Farm";
+            this.BuyLootBtn.UseVisualStyleBackColor = true;
+            this.BuyLootBtn.Click += new System.EventHandler(this.BuyLootBtn_Click);
+            // 
+            // ButSwapBtn
+            // 
+            this.ButSwapBtn.Location = new System.Drawing.Point(637, 12);
+            this.ButSwapBtn.Name = "ButSwapBtn";
+            this.ButSwapBtn.Size = new System.Drawing.Size(123, 55);
+            this.ButSwapBtn.TabIndex = 6;
+            this.ButSwapBtn.Text = "Buy items from Swap.GG";
+            this.ButSwapBtn.UseVisualStyleBackColor = true;
+            // 
             // MainView
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 450);
+            this.Controls.Add(this.ButSwapBtn);
+            this.Controls.Add(this.BuyLootBtn);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.DirectionGB);
             this.Controls.Add(this.groupBox1);
@@ -179,6 +203,8 @@
         public System.Windows.Forms.DataGridView mainData;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.ComboBox gameSelector;
+        private System.Windows.Forms.Button BuyLootBtn;
+        private System.Windows.Forms.Button ButSwapBtn;
     }
 }
 

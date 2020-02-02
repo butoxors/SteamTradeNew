@@ -51,6 +51,7 @@
     <Compile Include="SwapModel\Properties\Stock.cs" />
     <Compile Include="SwapModel\Properties\Result.cs" />
     <Compile Include="SwapModel\SwapModel.cs" />
+    <Compile Include="Users\UserModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -60,9 +61,9 @@
       <Project>{73d96516-a09d-496f-8375-46db32304099}</Project>
       <Name>Enums</Name>
     </ProjectReference>
-    <ProjectReference Include="..\Json\Json.csproj">
+    <ProjectReference Include="..\Json\JsonHelper.csproj">
       <Project>{fcfb1531-b601-4896-93d8-e39e23e06a78}</Project>
-      <Name>Json</Name>
+      <Name>JsonHelper</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

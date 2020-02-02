@@ -1,4 +1,4 @@
-﻿using Json;
+﻿using JsonHelper;
 using Newtonsoft.Json;
 
 namespace Models.SwapModel.Properties

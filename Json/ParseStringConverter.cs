@@ -1,7 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 
-namespace Json
+namespace JsonHelper
 {
     public class ParseStringConverter : JsonConverter
     {
